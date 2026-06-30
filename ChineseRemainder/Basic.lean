@@ -9,4 +9,9 @@ has a solution below `m * n`, and any two solutions agree modulo `m * n`.
 
 namespace ChineseRemainder
 
+/-- For coprime moduli, congruence mod `m * n` splits into both congruences. -/
+theorem modEq_mul_iff {m n x y : ℕ} (h : Nat.Coprime m n) :
+    x ≡ y [MOD m * n] ↔ x ≡ y [MOD m] ∧ x ≡ y [MOD n] := by
+  sorry
+
 end ChineseRemainder
