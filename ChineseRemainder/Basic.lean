@@ -11,7 +11,7 @@ namespace ChineseRemainder
 
 /-- For coprime moduli, congruence mod `m * n` splits into both congruences. -/
 theorem modEq_mul_iff {m n x y : ℕ} (h : Nat.Coprime m n) :
-    x ≡ y [MOD m * n] ↔ x ≡ y [MOD m] ∧ x ≡ y [MOD n] := by
-  sorry
+    x ≡ y [MOD m * n] ↔ x ≡ y [MOD m] ∧ x ≡ y [MOD n] :=
+  (Nat.modEq_and_modEq_iff_modEq_mul h).symm
 
 end ChineseRemainder
