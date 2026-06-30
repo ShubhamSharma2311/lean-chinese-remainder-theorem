@@ -14,4 +14,9 @@ theorem modEq_mul_iff {m n x y : ℕ} (h : Nat.Coprime m n) :
     x ≡ y [MOD m * n] ↔ x ≡ y [MOD m] ∧ x ≡ y [MOD n] :=
   (Nat.modEq_and_modEq_iff_modEq_mul h).symm
 
+/-- Uniqueness: two solutions agree modulo `m * n`. -/
+theorem crt_unique {m n x y : ℕ} (h : Nat.Coprime m n) (hm : x ≡ y [MOD m])
+    (hn : x ≡ y [MOD n]) : x ≡ y [MOD m * n] := by
+  sorry
+
 end ChineseRemainder
