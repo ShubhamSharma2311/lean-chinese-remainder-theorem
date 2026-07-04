@@ -19,4 +19,9 @@ theorem crt_unique {m n x y : ℕ} (h : Nat.Coprime m n) (hm : x ≡ y [MOD m])
     (hn : x ≡ y [MOD n]) : x ≡ y [MOD m * n] :=
   (modEq_mul_iff h).mpr ⟨hm, hn⟩
 
+/-- **Chinese remainder theorem**, existence. -/
+theorem crt_exists {m n : ℕ} (h : Nat.Coprime m n) (a b : ℕ) :
+    ∃ x, x ≡ a [MOD m] ∧ x ≡ b [MOD n] := by
+  sorry
+
 end ChineseRemainder
