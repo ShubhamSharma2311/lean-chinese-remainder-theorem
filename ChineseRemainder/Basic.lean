@@ -27,7 +27,8 @@ theorem crt_exists {m n : ℕ} (h : Nat.Coprime m n) (a b : ℕ) :
 
 /-- The solution can be chosen below `m * n`. -/
 theorem crt_exists_lt {m n : ℕ} (h : Nat.Coprime m n) (hm : m ≠ 0) (hn : n ≠ 0) (a b : ℕ) :
-    ∃ x < m * n, x ≡ a [MOD m] ∧ x ≡ b [MOD n] := by
-  sorry
+    ∃ x < m * n, x ≡ a [MOD m] ∧ x ≡ b [MOD n] :=
+  let c := Nat.chineseRemainder h a b
+  ⟨c.1, Nat.chineseRemainder_lt_mul h a b hm hn, c.2.1, c.2.2⟩
 
 end ChineseRemainder
