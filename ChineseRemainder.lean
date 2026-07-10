@@ -1,1 +1,2 @@
 import ChineseRemainder.Basic
+import ChineseRemainder.Examples
